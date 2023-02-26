@@ -52,7 +52,7 @@ const allAgentsHtml = (agent) => {
                 <div class="agent-icon-container">
                   <img
                     class="agent-icon"
-                    alt="Portrait of ${agent.displayName}"
+                    alt="Icon of ${agent.displayName}"
                     src=${agent.displayIcon}
                   />
                 </div>

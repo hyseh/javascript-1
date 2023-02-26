@@ -34,6 +34,7 @@ const getSpecificAgent = (url, endpoint, uuid) => {
     })
     .then((agent) => {
       let abilities = agent.abilities;
+      console.log(abilities);
       renderAgentDetails(agent, abilities, agentContainer);
     })
     .catch((error) => {
@@ -75,6 +76,7 @@ const renderAgentDetails = (agent, ability, target) => {
     const abilityIcon = document.createElement('img');
     const abilityName = document.createElement('p');
 
+    abilityIcon.alt = `Icon of ${elem.displayName}`;
     abilityIcon.src = `${elem.displayIcon}`;
     abilityName.innerHTML = `${elem.displayName}`;
 
@@ -86,6 +88,7 @@ const renderAgentDetails = (agent, ability, target) => {
   const agentImage = document.createElement('img');
   agentImageContainer.classList.add('agent-image-container');
   agentImage.classList.add('agent-image');
+  agentImage.alt = `Portrait of ${agent.displayName}`;
   agentImage.src = `${agent.fullPortraitV2}`;
   target.appendChild(agentImageContainer);
   agentImageContainer.appendChild(agentImage);
