@@ -1,0 +1,70 @@
+@import url(./layout/header.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #111c26;
+}
+
+a:link,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffbf5;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: '';
+  width: 75px;
+  height: 75px;
+  border: 15px solid #111c26;
+  border-top-color: #fd4556;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.error-container {
+  margin: 20px;
+}
+
+.error-container-content {
+  max-width: 1144px;
+  margin: auto;
+  padding: 16px;
+  border: 1px solid red;
+  color: red;
+  background: rgba(255, 0, 0, 0.1);
+}

@@ -1,0 +1,35 @@
+.main-container {
+  margin: 20px;
+}
+
+.main-container-content {
+  max-width: 1144px;
+  margin: auto;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.agent-container {
+  max-width: 192px;
+  background: #fd4556;
+}
+
+.agent-icon-container {
+  height: 192px;
+}
+
+.agent-icon-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.agent-info-container {
+  background: #fffbf5;
+}
